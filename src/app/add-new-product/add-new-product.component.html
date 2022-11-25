@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="card p-2">
+        <div class="row">
+            <div class="col-6">
+                <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput 
+                    placeholder="Product Name"
+                    [(ngModel)]="product.productName"
+                    name="productName">
+                   
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Product Description</mat-label>
+                    <input matInput 
+                    placeholder="Product Description"
+                    [(ngModel)]="product.productDescription"
+                    name="productDescription">
+                   
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Price</mat-label>
+                    <input matInput 
+                    placeholder="Price"
+                    [(ngModel)]="product.price"
+                    name="price">
+                   
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Features</mat-label>
+                    <input matInput 
+                    placeholder="Features"
+                    [(ngModel)]="product.features"
+                    name="features">
+                   
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Product Status</mat-label>
+                    <input matInput 
+                    placeholder="Product Status"
+                   
+                    [(ngModel)]="product.productStatus"
+                    name="productStatus">
+                   
+                </mat-form-field>
+                <div align="end">
+                <button type="submit" mat-stroked-button color="primary" style="margin-right: 3px;">Add Product</button>
+                <button mat-stroked-button color="primary">Clear</button>
+            </div>
+        </form>
+            </div>
+            <div class="col-6">
+                image area
+            </div>
+        </div>
+
+    </div>
+</div>
